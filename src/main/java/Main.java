@@ -20,9 +20,8 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    get("/hello/:name", (req, res) -> "Hello World");
-
-    get("/", (req, res) -> "Hello World, dear " + req.params(":name")); 
+    get("/", (req, res) -> "Hello World");
+    get("/hello/:name", (req, res) -> "Hello World, dear " + req.params(":name"));
     
     
   }
