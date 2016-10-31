@@ -20,8 +20,8 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    get("/", (req, res) -> "Hello World");
-    get("/hello/:name", (req, res) -> "Hello World, dear " + req.params(":name"));
+    get("/", (req, res) -> "Hello World!\nPlease go to niels-hello-world.herokuapp.com/yourname for a personalized Hello.");
+    get("/:name", (req, res) -> "Hello World, dear " + req.params(":name") + "!");
     
     
   }
